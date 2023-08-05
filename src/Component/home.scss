@@ -1,10 +1,34 @@
 .App {
     text-align: center;
   }
+  *{
+    text-decoration: none;
+  }
 
   .hotel-main{
     text-align: center;
     padding: 0px 2px;
+    position: relative;
+    .top-content{
+        position: sticky;
+        bottom: auto;
+        top: 0px;
+        overflow: hidden;
+        z-index: 9999;
+        background-color: white;
+    }
+    .sort-price{
+        .Sort-by-price{
+            border-radius: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            background-color: #fff;
+            text-align: left;
+            align-items: flex-start;
+            display: flex;
+            margin-left: 15px;
+        }
+    }
     .Favorites{
     
         button{
@@ -40,7 +64,9 @@
         .hotel-card{
             margin: 5px;
             padding: 5px;
-
+            .img-hotel{
+                padding: 20px;
+            }
             .hotel-imgae{
                 border-radius: 10px;
                 display: flex;
@@ -53,6 +79,7 @@
                 text-align: left;
                 display: flex;
                 flex-direction: column;
+                margin: 10px;
                 .name{
                     font-size: 15px;
                     line-height: 20px;
