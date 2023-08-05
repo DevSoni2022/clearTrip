@@ -45,7 +45,6 @@ const Home = ({ id, isDetails = false,HandleIsFaviourate }) => {
 
 
 
-
 const sortByFavirte=()=>{
     let Favrite = localStorage.fav
 Favrite = JSON.parse(Favrite)

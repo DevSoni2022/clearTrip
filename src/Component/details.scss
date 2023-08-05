@@ -5,10 +5,23 @@
         position: relative;
         .img-hotel{
             padding: 20px;
-
+            position: relative;
         .top-content{
-            display: flex;
             justify-content: space-between;
+            position: absolute;
+            top: 42px;
+            display: flex;
+            left: 20px;
+            width: 88%;
+            padding: 0px 5px;
+            a{
+                color: #fff;
+            }
+            div{
+                svg{
+
+                }
+            }
         }
         }
         // svg{
