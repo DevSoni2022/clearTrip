@@ -89,8 +89,7 @@ Favrite = JSON.parse(Favrite)
               {ele && ele.freeBreakfast && (
                 <span className="free">Free Breakfast</span>
               )}
-             {isDetails && <div className="details">
-                {ele.description}
+             {isDetails && <div className="details"  dangerouslySetInnerHTML={{__html: ele.description}}>
               </div>
                 }
             </div>
