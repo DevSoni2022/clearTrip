@@ -1,0 +1,86 @@
+.App {
+    text-align: center;
+  }
+
+  .hotel-main{
+    text-align: center;
+    .Favorites{
+    
+        button{
+            border-radius: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            background-color: #fff;
+            text-align: left;
+            align-items: flex-start;
+            display: flex;
+            margin: 10px 20px;
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+    .search-box{
+        margin: 20px 8px;
+        input{
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 10px;
+            padding: 10px;
+            width: fit-content;
+            margin: auto 0pz;
+            min-width: 300px;
+            width: 93%;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+
+        }
+    }
+    .hotel-card-list{
+        .hotel-card{
+            margin: 10px;
+            padding: 5px;
+
+            .hotel-imgae{
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: auto;
+            }
+            .card-other-content{
+                padding: 5px 0px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                .name{
+                    font-size: 15px;
+                    line-height: 20px;
+                    font-weight: 600;
+                    text-align: left;
+                    color: #1A1A1A;
+                    font-family: Verdana, sans-serif;
+                    align-items: center;
+                    padding: 10px 0px;
+                }
+                .price{
+                    font-size: 20px;
+                    line-height: 25px;
+                    font-weight: 700;
+                    text-align: left;
+                    color: #1A1A1A;
+                    font-family: Verdana, sans-serif;
+                    padding: 5px 0px;
+                }
+                .free{
+                    font-size: 12px;
+                    line-height: 18px;
+                    font-weight: 700;
+                    text-align: left;
+                    color: #42ce6a;
+                    font-family: Verdana, sans-serif;
+                    padding: 2px 0px;
+                }
+            }
+        }
+    }
+  }
