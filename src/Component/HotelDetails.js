@@ -12,7 +12,6 @@ let test =new URL(window.location.href);
 let id = test && test.search && test.search.slice(4).toString()
 
 const HandleIsFaviourate=(id)=>{
-    debugger
     let list =[]
 list.push(...list,id)
     localStorage.setItem('fav',JSON.stringify(list))
