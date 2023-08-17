@@ -11,6 +11,20 @@ const Home = ({ id, isDetails = false,HandleIsFaviourate }) => {
       .then((response) => response.json())
       .then((data) => setHotelData(data));
   }, []);
+  const Debounce = (fun,timeOut = 300)=>{
+    let timer;
+    return (...args)=>{
+      clearTimeout(timer);
+      timer = setTimeout(()=>{
+        fun.apply(this,args)
+      },timeOut)
+    }
+  }
+  const saveInput =()=>{
+    console.log("hit..")
+  }
+  const process = Debounce(()=>saveInput())
+
   const HandleOnChange = (ele) => {
     let text = ele.target.value;
     text = text.toLowerCase();
@@ -46,8 +60,9 @@ const Home = ({ id, isDetails = false,HandleIsFaviourate }) => {
 
 
 const sortByFavirte=()=>{
-    let Favrite = localStorage.fav
-Favrite = JSON.parse(Favrite)
+  
+    let Favrite = localStorage.fav ?? []
+Favrite =Favrite.length>0 ?  JSON.parse(Favrite) : []
 
     const result =
       Favrite.length>0 &&
@@ -55,6 +70,9 @@ Favrite = JSON.parse(Favrite)
       hotelData.filter((ele, index) => {
         return Favrite.includes( ele.id.toLowerCase())
       });
+      if(!Favrite.length>0){
+        alert('no Faviourite Hotel Selected')
+      }
     setHotelData(result.length > 0 ? result : hotelData);
 }
   return (

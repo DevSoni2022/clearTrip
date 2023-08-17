@@ -12,7 +12,11 @@ let test =new URL(window.location.href);
 let id = test && test.search && test.search.slice(4).toString()
 
 const HandleIsFaviourate=(id)=>{
-    let list =[]
+  debugger
+  let Favrite = localStorage.fav ?? []
+
+    let list =Favrite.length>0 ? JSON.parse(localStorage.getItem('fav'))
+    : []
 list.push(...list,id)
     localStorage.setItem('fav',JSON.stringify(list))
 }
